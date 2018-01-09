@@ -1,0 +1,652 @@
+
+Number Of Instructions: 6
+
+----------------------------------------------------------------------------------------------------
+Cycle 1:
+----------------------------------------------------------------------------------------------------
+Fetch     : (I0) MOVC,R0,#100
+
+Instructions in Issue Queue:- 
+Instructions in LS Queue:- 
+Commit
+Instructions in ROB are:- 
+
+Renamed Table is :- 
+DRF       : Empty 
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : Empty
+----------------------------------------------------------------------------------------------------
+Cycle 2:
+----------------------------------------------------------------------------------------------------
+Fetch     : (I1) MOVC,R1,#72
+
+Instructions in Issue Queue:- 
+Instructions in LS Queue:- 
+Commit
+Instructions in ROB are:- 
+
+Renamed Table is :- 
+DRF       : (I0) MOVC,R0,#100
+
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : Empty
+----------------------------------------------------------------------------------------------------
+Cycle 3:
+----------------------------------------------------------------------------------------------------
+Fetch     : (I2) MOVC,R2,#44
+
+Instructions in Issue Queue:- 
+(I0) MOVC,R0,#100
+
+Instructions in LS Queue:- 
+Commit
+Instructions in ROB are:- 
+(I0) MOVC,R0,#100
+ 
+
+Renamed Table is :- 
+R0     P1
+DRF       : (I1) MOVC,R1,#72
+
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : Empty
+----------------------------------------------------------------------------------------------------
+Cycle 4:
+----------------------------------------------------------------------------------------------------
+Fetch     : (I3) MOVC,R3,#4
+
+Instructions in Issue Queue:- 
+(I1) MOVC,R1,#72
+
+Instructions in LS Queue:- 
+Commit
+Instructions in ROB are:- 
+(I0) MOVC,R0,#100
+ 
+(I1) MOVC,R1,#72
+ 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+DRF       : (I2) MOVC,R2,#44
+
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : (I0) MOVC,R0,#100
+
+----------------------------------------------------------------------------------------------------
+Cycle 5:
+----------------------------------------------------------------------------------------------------
+Fetch     : (I4) DIV,R5,R2,R3
+
+Instructions in Issue Queue:- 
+(I2) MOVC,R2,#44
+
+Instructions in LS Queue:- 
+Commit
+(I0) MOVC,R0,#100
+ 
+Instructions in ROB are:- 
+(I1) MOVC,R1,#72
+ 
+(I2) MOVC,R2,#44
+ 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+DRF       : (I3) MOVC,R3,#4
+
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : (I1) MOVC,R1,#72
+
+----------------------------------------------------------------------------------------------------
+Cycle 6:
+----------------------------------------------------------------------------------------------------
+Fetch     : (I5) STORE,R3,R0,#72
+Instructions in Issue Queue:- 
+(I3) MOVC,R3,#4
+
+Instructions in LS Queue:- 
+Commit
+(I1) MOVC,R1,#72
+ 
+Instructions in ROB are:- 
+(I2) MOVC,R2,#44
+ 
+(I3) MOVC,R3,#4
+ 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+R3     P4
+DRF       : (I4) DIV,R5,R2,R3
+
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : (I2) MOVC,R2,#44
+
+----------------------------------------------------------------------------------------------------
+Cycle 7:
+----------------------------------------------------------------------------------------------------
+Fetch     : Empty 
+Instructions in Issue Queue:- 
+(I4) DIV,R5,R2,R3
+
+Instructions in LS Queue:- 
+Commit
+(I2) MOVC,R2,#44
+ 
+Instructions in ROB are:- 
+(I3) MOVC,R3,#4
+ 
+(I4) DIV,R5,R2,R3
+ 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+R3     P4
+R5     P5
+DRF       : (I5) STORE,R3,R0,#72
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : (I3) MOVC,R3,#4
+
+----------------------------------------------------------------------------------------------------
+Cycle 8:
+----------------------------------------------------------------------------------------------------
+Fetch     : Empty 
+Instructions in Issue Queue:- 
+(I5) STORE,R3,R0,#72
+Instructions in LS Queue:- 
+(I5) STORE,R3,R0,#72
+Commit
+(I3) MOVC,R3,#4
+ 
+Instructions in ROB are:- 
+(I4) DIV,R5,R2,R3
+ 
+(I5) STORE,R3,R0,#72 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+R3     P4
+R5     P5
+DRF       : Empty 
+DIV1      : (I4) DIV,R5,R2,R3
+
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : Empty
+----------------------------------------------------------------------------------------------------
+Cycle 9:
+----------------------------------------------------------------------------------------------------
+Fetch     : Empty 
+Instructions in Issue Queue:- 
+Instructions in LS Queue:- 
+(I5) STORE,R3,R0,#72
+Commit
+Instructions in ROB are:- 
+(I4) DIV,R5,R2,R3
+ 
+(I5) STORE,R3,R0,#72 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+R3     P4
+R5     P5
+DRF       : Empty 
+DIV1      : Empty
+DIV2      : (I4) DIV,R5,R2,R3
+
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : (I5) STORE,R3,R0,#72
+----------------------------------------------------------------------------------------------------
+Cycle 10:
+----------------------------------------------------------------------------------------------------
+Fetch     : Empty 
+Instructions in Issue Queue:- 
+Instructions in LS Queue:- 
+(I5) STORE,R3,R0,#72
+Commit
+Instructions in ROB are:- 
+(I4) DIV,R5,R2,R3
+ 
+(I5) STORE,R3,R0,#72 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+R3     P4
+R5     P5
+DRF       : Empty 
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : (I4) DIV,R5,R2,R3
+
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : Empty
+----------------------------------------------------------------------------------------------------
+Cycle 11:
+----------------------------------------------------------------------------------------------------
+Fetch     : Empty 
+Instructions in Issue Queue:- 
+Instructions in LS Queue:- 
+(I5) STORE,R3,R0,#72
+Commit
+Instructions in ROB are:- 
+(I4) DIV,R5,R2,R3
+ 
+(I5) STORE,R3,R0,#72 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+R3     P4
+R5     P5
+DRF       : Empty 
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : (I4) DIV,R5,R2,R3
+
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : Empty
+----------------------------------------------------------------------------------------------------
+Cycle 12:
+----------------------------------------------------------------------------------------------------
+Fetch     : Empty 
+Instructions in Issue Queue:- 
+Instructions in LS Queue:- 
+(I5) STORE,R3,R0,#72
+Commit
+(I4) DIV,R5,R2,R3
+ 
+Instructions in ROB are:- 
+(I5) STORE,R3,R0,#72 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+R3     P4
+R5     P5
+DRF       : Empty 
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : Empty
+----------------------------------------------------------------------------------------------------
+Cycle 13:
+----------------------------------------------------------------------------------------------------
+Fetch     : Empty 
+Instructions in Issue Queue:- 
+Instructions in LS Queue:- 
+Commit
+Instructions in ROB are:- 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+R3     P4
+R5     P5
+DRF       : Empty 
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : Empty
+MEM       : (I5) STORE,R3,R0,#72
+----------------------------------------------------------------------------------------------------
+Cycle 14:
+----------------------------------------------------------------------------------------------------
+Fetch     : Empty 
+Instructions in Issue Queue:- 
+Instructions in LS Queue:- 
+Commit
+Instructions in ROB are:- 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+R3     P4
+R5     P5
+DRF       : Empty 
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : Empty
+MEM       : (I5) STORE,R3,R0,#72
+----------------------------------------------------------------------------------------------------
+Cycle 15:
+----------------------------------------------------------------------------------------------------
+Fetch     : Empty 
+Instructions in Issue Queue:- 
+Instructions in LS Queue:- 
+Commit
+Instructions in ROB are:- 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+R3     P4
+R5     P5
+DRF       : Empty 
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : Empty
+MEM       : (I5) STORE,R3,R0,#72
+----------------------------------------------------------------------------------------------------
+Cycle 16:
+----------------------------------------------------------------------------------------------------
+Fetch     : Empty 
+Instructions in Issue Queue:- 
+Instructions in LS Queue:- 
+Commit
+Instructions in ROB are:- 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+R3     P4
+R5     P5
+DRF       : Empty 
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : Empty
+----------------------------------------------------------------------------------------------------
+Cycle 17:
+----------------------------------------------------------------------------------------------------
+Fetch     : Empty 
+Instructions in Issue Queue:- 
+Instructions in LS Queue:- 
+Commit
+Instructions in ROB are:- 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+R3     P4
+R5     P5
+DRF       : Empty 
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : Empty
+----------------------------------------------------------------------------------------------------
+Cycle 18:
+----------------------------------------------------------------------------------------------------
+Fetch     : Empty 
+Instructions in Issue Queue:- 
+Instructions in LS Queue:- 
+Commit
+Instructions in ROB are:- 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+R3     P4
+R5     P5
+DRF       : Empty 
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : Empty
+----------------------------------------------------------------------------------------------------
+Cycle 19:
+----------------------------------------------------------------------------------------------------
+Fetch     : Empty 
+Instructions in Issue Queue:- 
+Instructions in LS Queue:- 
+Commit
+Instructions in ROB are:- 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+R3     P4
+R5     P5
+DRF       : Empty 
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : Empty
+----------------------------------------------------------------------------------------------------
+Cycle 20:
+----------------------------------------------------------------------------------------------------
+Fetch     : Empty 
+Instructions in Issue Queue:- 
+Instructions in LS Queue:- 
+Commit
+Instructions in ROB are:- 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+R3     P4
+R5     P5
+DRF       : Empty 
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : Empty
+----------------------------------------------------------------------------------------------------
+Cycle 21:
+----------------------------------------------------------------------------------------------------
+Fetch     : Empty 
+Instructions in Issue Queue:- 
+Instructions in LS Queue:- 
+Commit
+Instructions in ROB are:- 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+R3     P4
+R5     P5
+DRF       : Empty 
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : Empty
+----------------------------------------------------------------------------------------------------
+Cycle 22:
+----------------------------------------------------------------------------------------------------
+Fetch     : Empty 
+Instructions in Issue Queue:- 
+Instructions in LS Queue:- 
+Commit
+Instructions in ROB are:- 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+R3     P4
+R5     P5
+DRF       : Empty 
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : Empty
+----------------------------------------------------------------------------------------------------
+Cycle 23:
+----------------------------------------------------------------------------------------------------
+Fetch     : Empty 
+Instructions in Issue Queue:- 
+Instructions in LS Queue:- 
+Commit
+Instructions in ROB are:- 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+R3     P4
+R5     P5
+DRF       : Empty 
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : Empty
+----------------------------------------------------------------------------------------------------
+Cycle 24:
+----------------------------------------------------------------------------------------------------
+Fetch     : Empty 
+Instructions in Issue Queue:- 
+Instructions in LS Queue:- 
+Commit
+Instructions in ROB are:- 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+R3     P4
+R5     P5
+DRF       : Empty 
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : Empty
+----------------------------------------------------------------------------------------------------
+Cycle 25:
+----------------------------------------------------------------------------------------------------
+Fetch     : Empty 
+Instructions in Issue Queue:- 
+Instructions in LS Queue:- 
+Commit
+Instructions in ROB are:- 
+
+Renamed Table is :- 
+R0     P1
+R1     P2
+R2     P3
+R3     P4
+R5     P5
+DRF       : Empty 
+DIV1      : Empty
+DIV2      : Empty
+DIV3      : Empty
+DIV4      : Empty
+MUL1      : Empty
+MUL2      : Empty
+INTFU     : Empty
+----------------------------------------------------------------------------------------------------
+Register Values are :
+----------------------------------------------------------------------------------------------------
+Register is R0 its value is 0 and status its is VALID
+
+Register is R1 its value is 72 and status its is VALID
+
+Register is R2 its value is 44 and status its is VALID
+
+Register is R3 its value is 4 and status its is VALID
+
+Register is R5 its value is 11 and status its is VALID
+----------------------------------------------------------------------------------------------------
+Memory Values are :
+----------------------------------------------------------------------------------------------------
+Memory Location is 172 and its value is 4
